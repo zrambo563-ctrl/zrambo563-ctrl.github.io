@@ -1,0 +1,69 @@
+
+
+.menu-desplegable {
+    position: relative;
+    cursor: pointer;
+}
+
+/* Ocultamos el submenú por defecto */
+.submenu {
+    display: none; 
+    position: absolute;
+    top: 100%; /* Se coloca justo debajo del li principal */
+    left: 0;
+    background-color: rgba(26, 26, 26, 0.75); /* Oscuro pero translúcido */
+        backdrop-filter: blur(12px); /* ¡Este es el secreto del efecto borroso tipo cristal! */
+        -webkit-backdrop-filter: blur(12px); /* Fondo oscuro acorde a tu nav */
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem;
+    min-width: 160px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    z-index: 100;
+}
+
+/* Estilo para los elementos internos del submenú */
+.submenu li a {
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+}
+
+
+
+.submenu li a:hover {
+    color:  #ce1b1b;
+    text-decoration:double;
+}
+
+/* Clase que activaremos con JavaScript para mostrarlo */
+.menu-desplegable.abierto .submenu {
+    display: flex;
+}
+
+
+/*ESTILOS DE LOS ICONOS Y EL LOGO*/
+#svg-whatsapp{
+    display:flex;
+    text-align: center;
+    background-color:#447821;        
+    border-radius: 50px;
+}
+#svg-whatsapp > a{
+    padding: 6px 14px; 
+    text-decoration: none;
+    color:white;
+    display: flex;
+    align-items: center;
+    gap:.5rem;
+    
+}
+
+#svg-whatsapp > a:hover{
+    color:#ff0000;
+}
+#svg-whatsapp img{
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
